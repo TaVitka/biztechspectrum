@@ -38,4 +38,10 @@
       margin-bottom: rem(32);
     }
   }
+
+  &--services {
+    .hero__inner {
+      padding-block: rem(64)
+    }
+  }
 }
