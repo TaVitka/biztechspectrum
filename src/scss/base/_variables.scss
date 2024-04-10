@@ -1,0 +1,33 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+
+:root {
+  --content-width: 1296px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // font-family
+  --font-family-primary: "Futura", sans-serif;
+
+  // font-weight
+  --fw-500: 500;
+  --fw-700: 700;
+
+  // color
+  --color-white: #fff;
+  --color-black: #111111;
+
+  --color-gray-100: #F6F6F6;
+  --color-orange-500: #FF7528;
+  --color-orange-600: #F55800;
+  --color-purple-670: rgba(79, 52, 137, 0.7);
+  --color-purple-650: #4F348980;
+  --color-purple-600: #4F3489;
+
+
+  //  radius
+  --radius-main: 16px;
+  --radius-medium: 24px;
+  --radius-large: 32px;
+  --radius-full: 50%;
+}
