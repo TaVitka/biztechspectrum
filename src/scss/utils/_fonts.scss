@@ -1,0 +1,4 @@
+@use "./mixins/font-face"as *;
+
+ @include font-ttf("Futura", "../fonts/futura/futura-medium", 500, normal);
+ @include font-ttf("Futura", "../fonts/futura/futura-bold", 700, normal);
