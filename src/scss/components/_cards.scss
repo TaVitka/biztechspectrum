@@ -9,6 +9,8 @@
 
   &__desc {
     margin-bottom: 24px;
+    max-width: 746px;
+    margin-inline: 0;
   }
 
   &__grid {
@@ -150,7 +152,8 @@
     background-color: var(--color-purple-600);
 
     h2,
-    .intro {
+    .intro,
+    .cards__desc {
       color: var(--color-white)
     }
 
@@ -160,7 +163,8 @@
     background-color: var(--color-orange-500);
 
     h2,
-    .intro {
+    .intro,
+    .cards__desc {
       color: var(--color-white)
     }
 
@@ -170,26 +174,12 @@
   }
 
   &--left {
-    h2,
-    .intro {
+    h2 {
       text-align: left;
-    }
-
-    .intro {
-      max-width: 746px;
-      margin-inline: 0;
     }
   }
 
   &--services {
     padding-top: 0;
-  }
-
-  &--company {
-    padding-bottom: rem(80);
-
-    .intro {
-      margin-bottom: 28px;
-    }
   }
 }
