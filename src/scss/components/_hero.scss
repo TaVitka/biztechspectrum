@@ -1,0 +1,41 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.hero {
+  $root: &;
+  padding: 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: rem(140.8) 0;
+    min-height: 488px;
+    background-position: 100% 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    z-index: 1;
+    margin-inline: rem(121.6) 0;
+    max-width: 856px;
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 16px;
+  }
+
+  &--home {
+    .hero__inner {
+      min-height: 732px;
+      padding: rem(60.8) 0;
+    }
+
+    .desc {
+      width: 90%;
+      margin-bottom: rem(32);
+    }
+  }
+}
