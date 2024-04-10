@@ -2,6 +2,8 @@
 @use "../utils/mixins/"as*;
 
 .services {
+  padding: rem(64) 0 rem(112);
+
   h2 {
     margin-bottom: rem(64);
   }
@@ -32,15 +34,19 @@
     h4 {
       margin-bottom: 8px;
     }
-
-    p {
-      width: 93%;
-    }
   }
 
   .btn {
     display: block;
     width: fit-content;
     margin-inline: auto;
+  }
+
+  &--cyber {
+    padding: 0 0 rem(112);
+  }
+
+  &--cloud {
+    padding: 0 0 rem(80);
   }
 }
