@@ -138,6 +138,19 @@
 
   }
 
+  &--accent-reverse {
+    background-color: var(--color-orange-500);
+
+    h2,
+    .intro {
+      color: var(--color-white)
+    }
+
+    h3 {
+      color: var(--color-purple-600)
+    }
+  }
+
   &--left {
     h2,
     .intro {
@@ -152,5 +165,13 @@
 
   &--services {
     padding-top: 0;
+  }
+
+  &--company {
+    padding-bottom: rem(80);
+
+    .intro {
+      margin-bottom: 28px;
+    }
   }
 }
