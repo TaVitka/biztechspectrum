@@ -2,8 +2,31 @@
 @use "../utils/mixins/"as*;
 
 .texts {
+  h1,
+  &__desc {
+    max-width: 856px;
+    width: 100%;
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  h1 {
+    margin-bottom: rem(32);
+    color: var(--color-orange-500);
+  }
+
   h2 {
     text-align: left;
+  }
+
+  &__desc {
+    &:not(:last-of-type) {
+      margin-bottom: rem(64);
+    }
+  }
+
+  .cards {
+    margin-bottom: rem(64);
   }
 
   &__content {
@@ -14,5 +37,9 @@
     p:not(:last-child) {
       margin-bottom: 24px;
     }
+  }
+
+  &--single {
+    padding-bottom: rem(80)
   }
 }
