@@ -50,8 +50,15 @@ a {
 }
 
 p {
-  line-height: 1.36;
+  line-height: 1.4;
   letter-spacing: .7px;
+}
+
+.intro {
+  max-width: 636px;
+  width: 100%;
+  margin: 0 auto rem(32);
+  text-align: center;
 }
 
 input,

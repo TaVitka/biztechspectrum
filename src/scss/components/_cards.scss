@@ -2,11 +2,9 @@
 @use "../utils/mixins/"as*;
 
 .cards {
-  &__desc {
-    max-width: 636px;
-    width: 100%;
-    margin: 0 auto rem(32);
-    text-align: center;
+
+  .intro {
+    line-height: 1.36;
   }
 
   &__grid {
