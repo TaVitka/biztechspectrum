@@ -1,0 +1,18 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.texts {
+  h2 {
+    text-align: left;
+  }
+
+  &__content {
+    width: 56%;
+  }
+
+  &__text {
+    p:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
