@@ -99,4 +99,17 @@
       gap: 30px;
     }
   }
+
+  &--footer {
+    margin-bottom: rem(44.8);
+
+    .nav__list {
+      max-width: 100%;
+      justify-content: center;
+    }
+
+    .nav__item {
+      padding-block: 18px;
+    }
+  }
 }

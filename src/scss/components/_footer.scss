@@ -1,0 +1,55 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.footer {
+  padding-block: rem(51.2);
+  background-color: var(--color-purple-600);
+
+  &__content,
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo,
+  &__mail {
+    margin-bottom: 24px;
+  }
+
+  &__mail {
+    display: flex;
+    align-items: center;
+
+    a, span {
+      font-size: clamp(20px, 1.5vw, 24px);
+      line-height: 1.5;
+      font-weight: var(--fw-500);
+      color: var(--color-white);
+      letter-spacing: 1.4px;
+    }
+  }
+
+  &__form {
+    gap: 16px;
+    max-width: 636px;
+    width: 100%;
+    margin-bottom: rem(44.8);;
+
+    textarea,
+    .btn {
+      border-radius: var(--radius-main);
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 240px;
+      padding: 16px;
+      resize: none;
+    }
+  }
+}
