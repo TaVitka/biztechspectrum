@@ -1,0 +1,77 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.cards {
+  &__desc {
+    max-width: 636px;
+    width: 100%;
+    margin: 0 auto rem(32);
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-auto-rows: auto;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  &__item {
+    padding: 24px;
+    background-color: var(--color-gray-100);
+    border-radius: var(--radius-medium);
+  }
+
+  &--three {
+    .cards__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cards__item {
+      padding: rem(32);
+    }
+
+    .cards__title {
+      position: relative;
+      padding-top: 98px;
+
+      &::before {
+        @include contain-background;
+
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 76px;
+        height: 74px;
+      }
+
+      &--network::before {
+        background-image: url("../images/icons/network-icon.svg");
+      }
+
+      &--cloud::before {
+        background-image: url("../images/icons/cloud-icon.svg");
+      }
+
+      &--cyber::before {
+        background-image: url("../images/icons/cyber-icon.svg");
+      }
+    }
+  }
+
+  &--btn {
+    .cards__grid {
+      margin-bottom: rem(32);
+    }
+
+    .btn {
+      display: block;
+      width: fit-content;
+      margin-inline: auto;
+    }
+  }
+
+  &--services {
+    padding-top: 0;
+  }
+}
