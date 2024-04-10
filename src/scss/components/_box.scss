@@ -1,0 +1,79 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.box {
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 634px;
+    width: 100%;
+    margin-right: 24px;
+
+    h2 {
+      margin-bottom: 16px;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .intro {
+      margin-bottom: 32px;
+      line-height: 1.4;
+      text-align: left;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 104px;
+
+    &::before {
+      @include cover-background;
+
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      left: 0;
+      top: 0;
+    }
+
+    &--customer::before {
+      background-image: url("../images/icons/customer-icon.svg");
+    }
+
+    &--quality::before {
+      background-image: url("../images/icons/quality-icon.svg");
+    }
+
+    &--innovation::before {
+      background-image: url("../images/icons/innovation-icon.svg");
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 32px;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+      padding-top: 4px;
+    }
+
+    ol {
+      width: 95%;
+      padding-left: 28px;
+    }
+
+    li {
+      list-style: disc;
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
