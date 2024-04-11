@@ -42,4 +42,16 @@
   &--single {
     padding-bottom: rem(80)
   }
+
+  @include media(tablet) {
+    &__content {
+      width: 80%;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__content {
+      width: 100%;
+    }
+  }
 }
