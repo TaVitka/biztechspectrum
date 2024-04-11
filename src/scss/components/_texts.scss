@@ -47,9 +47,29 @@
     &__content {
       width: 80%;
     }
+
+    &--single {
+      padding: rem(30) 0;
+
+      .texts__desc {
+        &:not(:last-of-type) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    .cards {
+      margin-bottom: 40px;
+    }
   }
 
   @include media(mobile-m) {
+    h1 {
+      margin-bottom: 24px;
+    }
+
     &__content {
       width: 100%;
     }

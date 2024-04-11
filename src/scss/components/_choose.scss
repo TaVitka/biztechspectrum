@@ -153,6 +153,16 @@
         width: 90%;
       }
     }
+
+    &--insights {
+      h2 {
+        margin-bottom: 24px;
+      }
+
+      .choose__items {
+        margin-bottom: 0;
+      }
+    }
   }
 
   @include media(mobile-l) {

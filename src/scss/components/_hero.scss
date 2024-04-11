@@ -65,6 +65,14 @@
     }
   }
 
+  @include media(mobile-m) {
+    &--single {
+      .hero__inner {
+        min-height: 175px;
+      }
+    }
+  }
+
   @include media(mobile-s) {
     &--services {
       .hero__content {

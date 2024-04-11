@@ -272,6 +272,20 @@
       }
     }
 
+    &--odd {
+      .cards__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards__item {
+        grid-column: auto;
+
+        &--long {
+          grid-column: auto;
+        }
+      }
+    }
+
     &--avatars {
       .cards__inner {
         text-align: left;
@@ -286,6 +300,13 @@
   }
 
   @include media(mobile-m) {
+    &__item {
+      h3 {
+        font-size: 20px;
+        line-height: 1.3;
+      }
+    }
+
     &--services {
       padding-top: 20px;
     }
