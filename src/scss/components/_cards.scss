@@ -2,7 +2,6 @@
 @use "../utils/mixins/"as*;
 
 .cards {
-
   .intro {
     line-height: 1.36;
   }
@@ -115,7 +114,7 @@
 
   &--avatars {
     .cards__item {
-      padding: rem(32) rem(33.6);
+      padding: rem(32) rem(34);
     }
 
     .cards__inner {
@@ -181,5 +180,72 @@
 
   &--services {
     padding-top: 0;
+  }
+
+  @include media(tablet) {
+    &__grid {
+      gap: 16px;
+    }
+
+    &__item {
+      padding: 16px;
+    }
+
+    &--three {
+      .cards__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cards__item {
+        &:last-of-type {
+          grid-column: span 2;
+        }
+      }
+
+      .cards__title {
+        padding-top: 60px;
+
+        &::before {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    &--icons {
+      .cards__item {
+        padding: 16px;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__grid {
+      grid-auto-rows: auto;
+    }
+
+    &--three {
+      .cards__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards__item {
+        &:last-of-type {
+          grid-column: auto;
+        }
+      }
+    }
+
+    &--two {
+      .cards__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &--services {
+      padding-top: 20px;
+    }
   }
 }

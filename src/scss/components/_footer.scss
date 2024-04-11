@@ -2,7 +2,7 @@
 @use "../utils/mixins/"as*;
 
 .footer {
-  padding-block: rem(51.2);
+  padding-block: rem(51);
   background-color: var(--color-purple-600);
 
   &__content,
@@ -38,7 +38,7 @@
     gap: 16px;
     max-width: 636px;
     width: 100%;
-    margin-bottom: rem(44.8);;
+    margin-bottom: rem(45);
 
     textarea,
     .btn {
@@ -50,6 +50,41 @@
       min-height: 240px;
       padding: 16px;
       resize: none;
+    }
+  }
+
+  &__links {
+    display: none;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 16px;
+    }
+  }
+
+  @include media(tablet) {
+    padding: rem(30) 0;
+
+    &__form {
+      margin-bottom: 40px;
+    }
+
+    &__links {
+      display: flex;
+    }
+  }
+
+  @include media(mobile-s) {
+    &__mail {
+      flex-direction: column;
+    }
+
+    &__link {
+      font-size: 18px;
+      font-weight: var(--fw-500);
     }
   }
 }
