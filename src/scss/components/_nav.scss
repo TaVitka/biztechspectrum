@@ -15,6 +15,10 @@
     max-width: 127px;
     width: 100%;
     margin-right: 24px;
+
+    @include media(tablet) {
+      max-width: 100px;
+    }
   }
 
   &__inner {

@@ -57,5 +57,19 @@
         padding: 50px 0;
       }
     }
+
+    &--services {
+      .hero__content {
+        width: 80%;
+      }
+    }
+  }
+
+  @include media(mobile-s) {
+    &--services {
+      .hero__content {
+        width: 100%;
+      }
+    }
   }
 }
